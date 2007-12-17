@@ -31,7 +31,7 @@ to any host:port, SOCKS v4 and v5 proxies (www.socks.nec.com), and wingate
 Summary:	Receiving part of proxycheck
 Group:		Networking/Other
 Requires:	xinetd
-Prereq:		rpm-helper
+Requires(post,preun):	rpm-helper
 
 %description proxylogger
 
