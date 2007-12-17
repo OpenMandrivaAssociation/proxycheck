@@ -13,7 +13,6 @@ URL:		http://www.corpit.ru/mjt/proxycheck.html
 Source0		http://www.corpit.ru/mjt/proxycheck/%{name}-%{version}.tar.bz2
 Source1:	%{name}.logrotate.bz2
 Requires(pre):	rpm-helper
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 
