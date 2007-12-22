@@ -1,6 +1,6 @@
 %define name	proxycheck
 %define version	0.49a
-%define release	%mkrel 3
+%define release	%mkrel 4
 
 Name:		%{name}
 Version:	%{version}
