@@ -16,7 +16,6 @@ Requires(pre):	rpm-helper
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
-
 Proxycheck is a simple tool to quickly check whenever a given host or set of
 hosts has open proxy server running. Open proxies of various kinds are (ab)used
 nowadays for various evil things like sending mass spam, hacking into your
@@ -35,7 +34,6 @@ Requires:	xinetd
 Requires(post,preun):	rpm-helper
 
 %description proxylogger
-
 Proxylogger is a trivial program (invoked from xinetd) that writes out a string
 "550 ESMTP_unwelcome [peer.ip.add.ress]" to the network and optionally waits
 for a string in form
