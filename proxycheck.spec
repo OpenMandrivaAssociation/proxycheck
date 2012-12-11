@@ -10,10 +10,9 @@ Epoch:		1
 License:	GPL
 Group:		Networking/Other
 URL:		http://www.corpit.ru/mjt/proxycheck.html
-Source0		http://www.corpit.ru/mjt/proxycheck/%{name}-%{version}.tar.bz2
+Source0:	http://www.corpit.ru/mjt/proxycheck/%{name}-%{version}.tar.bz2
 Source1:	%{name}.logrotate.bz2
 Requires(pre):	rpm-helper
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Proxycheck is a simple tool to quickly check whenever a given host or set of
@@ -87,9 +86,6 @@ install -d -m 755 %{buildroot}%{_var}/log/%{name}
 install -d -m 755 %{buildroot}%{_sysconfdir}/logrotate.d
 install -m 644 %{name}.logrotate %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 
-%clean
-rm -rf %{buildroot}
-
 %pre proxylogger
 %_pre_useradd proxylogger /var/log/proxylogger /bin/false
 
@@ -97,15 +93,12 @@ rm -rf %{buildroot}
 %_postun_userdel proxylogger
 
 %files
-%defattr(-,root,root)
 %doc CHANGES
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 
 %files proxylogger
-%defattr(-,root,root)
 %{_bindir}/proxylogger
 %config(noreplace) %_sysconfdir/xinetd.d/proxylogger
 %config(noreplace) %{_sysconfdir}/logrotate.d/%{name}
 %attr(-,proxylogger,proxylogger) %{_var}/log/%{name}
-
