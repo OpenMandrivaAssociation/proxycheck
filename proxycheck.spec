@@ -14,6 +14,11 @@ Source0:	http://www.corpit.ru/mjt/proxycheck/%{name}-%{version}.tar.bz2
 Source1:	%{name}.logrotate.bz2
 Requires(pre):	rpm-helper
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 Proxycheck is a simple tool to quickly check whenever a given host or set of
 hosts has open proxy server running. Open proxies of various kinds are (ab)used
